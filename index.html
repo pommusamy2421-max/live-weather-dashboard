@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="weather-app">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>🌤️ Live Weather Dashboard</h1>
+            <p>Real-time weather information and 5-day forecast</p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+            </div>
+
+            <p id="errorMessage" class="error-message"></p>
+
+        </section>
+
+        <!-- Loading Message -->
+        <div id="loading" class="loading">
+            Loading weather data...
+        </div>
+
+        <!-- Current Weather -->
+        <section id="currentWeather" class="current-weather">
+
+            <div class="weather-main">
+
+                <div class="location">
+                    <h2 id="cityName">City Name</h2>
+                    <p id="countryName">Country</p>
+                </div>
+
+                <div class="weather-icon">
+                    <img
+                        id="weatherIcon"
+                        src=""
+                        alt="Weather Icon"
+                    >
+                </div>
+
+                <div class="temperature">
+                    <h2 id="temperature">--°C</h2>
+                    <p id="weatherDescription">Weather condition</p>
+                </div>
+
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail-card">
+                    <span>🌡️</span>
+                    <h3>Feels Like</h3>
+                    <p id="feelsLike">--°C</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>💧</span>
+                    <h3>Humidity</h3>
+                    <p id="humidity">--%</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>💨</span>
+                    <h3>Wind Speed</h3>
+                    <p id="windSpeed">-- km/h</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌡️</span>
+                    <h3>Pressure</h3>
+                    <p id="pressure">-- hPa</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 5-Day Forecast -->
+        <section class="forecast-section">
+
+            <h2>📅 5-Day Forecast</h2>
+
+            <div id="forecastContainer" class="forecast-container">
+
+                <!-- Forecast cards will be added using JavaScript -->
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Live Weather Dashboard | Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
